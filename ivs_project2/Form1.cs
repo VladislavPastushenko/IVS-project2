@@ -113,10 +113,9 @@ namespace ivs_project2
 
 
         //  Processing event of pushing the sign change button '+/-'
-        private void button_sign_Click(object sender, EventArgs e)
+        public void button_sign_Click(object sender, EventArgs e)
         {
             buttonInts('-');
-            result = -result;
 
         }
 
@@ -305,7 +304,7 @@ namespace ivs_project2
                 }
                 else
                 {
-                    if (result > 0 || (result < 0 && tmp >= 1 || tmp <= 0))
+                    if (result >= 0 || (result < 0 && tmp >= 1 || tmp <= 0))
                     {
                         result = Math.Pow(result, tmp);
                         label_result.Text = result.ToString();
