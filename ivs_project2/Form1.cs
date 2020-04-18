@@ -287,14 +287,38 @@ namespace ivs_project2
                 if (wasInput)
                 {
                     tmp = Convert.ToDouble(label_result.Text);
-                    result = Math.Pow(result, Convert.ToDouble(label_result.Text));
-                    label_result.Text = result.ToString();
-                    wasInput = false;
+                    if (result >= 0 || (result < 0 && (Convert.ToDouble(label_result.Text) >= 1 || Convert.ToDouble(label_result.Text) <= 0)))
+                    {
+                        result = Math.Pow(result, Convert.ToDouble(label_result.Text));
+                        label_result.Text = result.ToString();
+                        wasInput = false;
+                    }
+                    else
+                    {
+                        label_result.Text = "Error";
+                        result = 0;
+                        operation = '0';
+                        tmp = 0;
+                        wasInput = true;
+                        return;
+                    }
                 }
                 else
                 {
-                    result = Math.Pow(result, tmp);
-                    label_result.Text = result.ToString();
+                    if (result > 0 || (result < 0 && tmp >= 1 || tmp <= 0))
+                    {
+                        result = Math.Pow(result, tmp);
+                        label_result.Text = result.ToString();
+                    }
+                    else
+                    {
+                        label_result.Text = "Error";
+                        result = 0;
+                        operation = '0';
+                        tmp = 0;
+                        wasInput = true;
+                        return;
+                    }
                 }
             }
 
@@ -304,13 +328,40 @@ namespace ivs_project2
                 if (wasInput)
                 {
                     tmp = Convert.ToDouble(label_result.Text);
-                    result = Math.Pow(result, 1 / Convert.ToDouble(label_result.Text));
+
+                    if (result < 0 && Convert.ToDouble(label_result.Text) % 2 == 1)
+                        result = Math.Sign(result) * Math.Pow(Math.Abs(result), 1 / Convert.ToDouble(label_result.Text));
+                    else if (result < 0 && Convert.ToDouble(label_result.Text) % 2 != 1)
+                    {
+                        label_result.Text = "Error";
+                        result = 0;
+                        operation = '0';
+                        tmp = 0;
+                        wasInput = true;
+                        return;
+                    }
+                    else
+                        result = Math.Pow(result, 1 / Convert.ToDouble(label_result.Text));
+
                     label_result.Text = result.ToString();
                     wasInput = false;
                 }
                 else
                 {
-                    result = Math.Pow(result, 1 / tmp);
+                    if (result < 0 && tmp % 2 == 1)
+                        result = Math.Sign(result) * Math.Pow(Math.Abs(result), 1 / tmp);
+                    else if (result < 0 && tmp % 2 != 1)
+                    {
+                        label_result.Text = "Error";
+                        result = 0;
+                        operation = '0';
+                        tmp = 0;
+                        wasInput = true;
+                        return;
+                    }
+                    else
+                        result = Math.Pow(result, 1 / tmp);
+                
                     label_result.Text = result.ToString();
                 }
             }
@@ -350,7 +401,7 @@ namespace ivs_project2
             // User has entered just the first number and has pushed one of the buttons representing mathematical operations
             if (operation == '0')
             {
-                if (!label_result.Text.Equals("..."))
+                if (!label_result.Text.Equals("...") && !label_result.Text.Equals("Error"))
                 {
                     result += Convert.ToDouble(label_result.Text);
                     tmp = result;
@@ -393,9 +444,37 @@ namespace ivs_project2
             else if (op == '/')
                 result /= Convert.ToDouble(label_result.Text);
             else if (op == '^')
-                result = Math.Pow(result, Convert.ToDouble(label_result.Text));
+            {
+                if (result > 0 || (result < 0 && (Convert.ToDouble(label_result.Text) >= 1 || Convert.ToDouble(label_result.Text) <= 0)))
+                {
+                    result = Math.Pow(result, Convert.ToDouble(label_result.Text));
+                }
+                else
+                {
+                    label_result.Text = "Error";
+                    result = 0;
+                    operation = '0';
+                    tmp = 0;
+                    wasInput = true;
+                    return;
+                }
+            }
             else if (op == '√')
-                result = Math.Pow(result, 1 / Convert.ToDouble(label_result.Text));
+            {
+                if (result < 0 && Convert.ToDouble(label_result.Text) % 2 == 1)
+                    result = Math.Sign(result) * Math.Pow(Math.Abs(result), 1 / Convert.ToDouble(label_result.Text));
+                else if (result < 0 && Convert.ToDouble(label_result.Text) % 2 != 1)
+                {
+                    label_result.Text = "Error";
+                    result = 0;
+                    operation = '0';
+                    tmp = 0;
+                    wasInput = true;
+                    return;
+                }
+                else
+                    result = Math.Pow(result, 1 / Convert.ToDouble(label_result.Text));
+            }
             else if (op == '%')
                 result = result / 100 * Convert.ToDouble(label_result.Text);
         }
@@ -405,6 +484,7 @@ namespace ivs_project2
         // !!!!!!!!!!!!!!!!!!!!! ДОПИСАТЬ КОММЕНТАРИИ, РЕФАКТОРИНГ КОДА !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         public void buttonInts(int value)
         {
+            
 
             // Processing sign change
             if (value == '-')
@@ -432,6 +512,11 @@ namespace ivs_project2
             if (value == -2)
             {
                 if (label_result.Text.Equals("..."))
+                {
+                    label_result.Text = "...";
+                    return;
+                }
+                else if (label_result.Text.Equals("Error"))
                 {
                     label_result.Text = "...";
                     return;
@@ -466,7 +551,7 @@ namespace ivs_project2
                 // Float point setting
                 if (value == ',')
                 {
-                    if (!label_result.Text.Equals("..."))
+                    if (!label_result.Text.Equals("...") && !label_result.Text.Equals("Error"))
                         label_result.Text += ",";
                     else
                         wasInput = false;
@@ -475,7 +560,7 @@ namespace ivs_project2
                 // Processing numbers
                 else
                 {
-                    if (label_result.Text.Equals("..."))
+                    if (label_result.Text.Equals("...") || label_result.Text.Equals("Error"))
                         label_result.Text = value.ToString();
                     else
                         label_result.Text += value.ToString();
