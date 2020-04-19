@@ -83,7 +83,6 @@ namespace Profiling
             profilingForm.button_degree_Click(profilingForm, e);
             profilingForm.button_2_Click(profilingForm, e);
             profilingForm.button_equal_Click(profilingForm, e);
-            Console.WriteLine(profilingForm.label_result.Text);
 
 
             profilingForm.button_multiply_Click(profilingForm, e);
