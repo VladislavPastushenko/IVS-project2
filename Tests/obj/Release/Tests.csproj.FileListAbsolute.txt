@@ -17,3 +17,5 @@ C:\Users\vlad1\Desktop\IVS-project2\Tests\obj\Release\Tests.csprojAssemblyRefere
 C:\Users\vlad1\Desktop\IVS-project2\Tests\obj\Release\Tests.csproj.CopyComplete
 C:\Users\vlad1\Desktop\IVS-project2\Tests\obj\Release\Tests.dll
 C:\Users\vlad1\Desktop\IVS-project2\Tests\obj\Release\Tests.pdb
+C:\Users\vlad1\Desktop\IVS-project2\Tests\bin\Release\Tests.dll.CodeAnalysisLog.xml
+C:\Users\vlad1\Desktop\IVS-project2\Tests\bin\Release\Tests.dll.lastcodeanalysissucceeded

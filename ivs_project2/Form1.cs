@@ -138,7 +138,6 @@ namespace ivs_project2
             buttonInts(-2);
         }
 
-        // !!!!!!!!!!!!!!!!!!!! ДОДЕЛАТЬ !!!!!!!!!!!!!!!!!!!!
         // Processing input from keyboard
         public void Form1_KeyDown(object sender, KeyEventArgs e)
         {
@@ -480,7 +479,6 @@ namespace ivs_project2
 
 
         // Function outputting to the panel the results of calculations and processing requests for output
-        // !!!!!!!!!!!!!!!!!!!!! ДОПИСАТЬ КОММЕНТАРИИ, РЕФАКТОРИНГ КОДА !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         public void buttonInts(int value)
         {
             

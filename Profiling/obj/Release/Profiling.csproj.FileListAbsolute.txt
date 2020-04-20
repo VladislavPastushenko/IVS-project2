@@ -8,3 +8,5 @@ C:\Users\vlad1\Desktop\IVS-project2\Profiling\bin\Release\ivs_project2.exe.confi
 C:\Users\vlad1\Desktop\IVS-project2\Profiling\obj\Release\Profiling.csproj.CopyComplete
 C:\Users\vlad1\Desktop\IVS-project2\Profiling\obj\Release\Profiling.exe
 C:\Users\vlad1\Desktop\IVS-project2\Profiling\obj\Release\Profiling.pdb
+C:\Users\vlad1\Desktop\IVS-project2\Profiling\bin\Release\Profiling.exe.CodeAnalysisLog.xml
+C:\Users\vlad1\Desktop\IVS-project2\Profiling\bin\Release\Profiling.exe.lastcodeanalysissucceeded

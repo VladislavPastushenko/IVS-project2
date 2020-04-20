@@ -11,13 +11,9 @@ namespace Profiling
         static void Main(string[] args)
         {
 
-            Console.WriteLine("Start...");
-
-
+           
             ivs_project2.Form1 profilingForm = new ivs_project2.Form1();
             EventArgs e = new EventArgs();
-
-            Console.WriteLine("Reading Data from stdin");
 
             // Put information from stdin to variable data
             int symb = Console.Read();
@@ -25,6 +21,9 @@ namespace Profiling
             for (int i = 0; symb > -1; symb = Console.Read())
             {
                 data += (char)symb;
+
+                if (symb == '$')
+                    break;
             }
 
             
@@ -118,7 +117,8 @@ namespace Profiling
             string result = profilingForm.label_result.Text;
             
 
-            Console.Write("Result is " + result);
+            Console.WriteLine(result);
+            
         }
 
         static bool input(char symb, ivs_project2.Form1 profilingForm, EventArgs e)
