@@ -20,6 +20,9 @@ using System.Windows.Forms;
  */
 namespace ivs_project2
 {
+    /**
+    * @class Form1
+    */
     public partial class Form1 : Form
     {
         /// Inicializing variables
@@ -50,7 +53,6 @@ namespace ivs_project2
 
 
         /**
-        * @
         * @brief Form inicialization
         * @public
         */
