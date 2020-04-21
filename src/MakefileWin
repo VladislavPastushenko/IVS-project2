@@ -1,0 +1,13 @@
+all:
+	ivs_project2\bin\Release\ivs_project2.exe
+
+run:
+	ivs_project2\bin\Release\ivs_project2.exe
+    
+profile:
+	Profiling\bin\Release\Profiling.exe < Profiling\bin\Release\data.txt
+help:
+
+clean:
+
+pack:

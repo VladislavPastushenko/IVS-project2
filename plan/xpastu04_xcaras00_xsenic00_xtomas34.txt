@@ -1,0 +1,52 @@
+Deadlines:
+	1. 18.03.2020 - upload project plan
+	2. 20.03.2020 - create and tune repository, create readme file
+	3. 22.03.2020 - initialization of project
+	4. 29.03.2020 - create GUI
+	5. 03.04.2020 - create tests for math library
+	6. 10.04.2020 - implementation of math library
+	7. 13.04.2020 - install and connect math library to GUI
+	8. 17.04.2020 - create makefile and documentation
+	9. 22.04.2020 - create hodnoceni.txt and skutecnost.txt
+	10. 23.04.2019 - create and upload archiv with final product
+	11. 08.05.2020 - every participant upload xloginNN_problemy.txt
+
+Distribution of tasks between team members:
+
+	Vladislav Pastushenko (xpastu04):
+		- TeamLead
+		- Project plan
+		- Creation of repository
+		- Project initialization
+		- Create GUI
+		- Implementation of math library
+		- Install and connect math library to GUI
+		- Сreate and upload archiv with final product
+
+	Yahor Senichak (xsenic00)
+		- Create of makefile
+		- Implementation of math library
+		- Link GUI Interface with Math library		
+	
+	Elena Сarasek (xcaras00)
+		- Project documentation
+		- User documentation
+		- Create GUI
+		- Control and amendment in English grammar
+		
+	
+	Viktoryia Tomason (xtomas34)
+		- Create tests for math library
+		- Implementation of math library
+		- Link GUI Interface with Math library
+		- User documentation
+		- Presentation
+
+Communication channels
+	- Team channel in Telegram (primary channel)
+	- Team channel in vk.com (additional channel)
+	- For Force Majeures mobile phones
+
+Version Control System: GIT
+Hostring: github.com
+	

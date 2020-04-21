@@ -1,0 +1,16 @@
+all:
+	./ivs_project2/bin/Release/ivs_project2.exe
+
+run:
+	./ivs_project2/bin/Release/ivs_project2.exe
+    
+profile:
+	touch data.txt
+	echo "1 2 3 4 5" > data.txt 
+	./Profiling/bin/Release/Profiling.exe < data.txt
+	rm data.txt
+help:
+
+clean:
+
+pack:
