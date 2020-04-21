@@ -19,10 +19,7 @@ using System.Windows.Forms;
  * @namespace ivs_project2
  */
 namespace ivs_project2
-{   
-    /**
-    * @class Form1
-    */
+{
     public partial class Form1 : Form
     {
         /// Inicializing variables
@@ -53,6 +50,7 @@ namespace ivs_project2
 
 
         /**
+        * @
         * @brief Form inicialization
         * @public
         */
@@ -193,16 +191,16 @@ namespace ivs_project2
 
         /**
         * @brief Processing event of pushing the sign change button '+/-'
-        * @private
+        * @public
         * @param [in] sender    Provides a reference to the object that has raised the event
         * @param [in] e         An object specific for the event being processed
         * @post Shows minus sign in front of the number
         * @post Negates number's value
         */
-        private void button_sign_Click(object sender, EventArgs e)
+        public void button_sign_Click(object sender, EventArgs e)
         {
             buttonInts('-');
-            result = -result;
+
         }
 
 
@@ -463,7 +461,7 @@ namespace ivs_project2
                 }
                 else
                 {
-                    if (result > 0 || (result < 0 && tmp >= 1 || tmp <= 0))
+                    if (result >= 0 || (result < 0 && tmp >= 1 || tmp <= 0))
                     {
                         result = Math.Pow(result, tmp);
                         label_result.Text = result.ToString();
