@@ -8,96 +8,169 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/**
+ *  @file Form1.cs
+ *  The file contains math library.
+ *  @authors Pastushenko Vladislav, Senichak Yahor, Tomason Viktoriya
+ *  @date April 2020
+ */
+
+/**
+ * @namespace ivs_project2
+ */
 namespace ivs_project2
 {
+    /**
+    * @class Form1
+    */
     public partial class Form1 : Form
     {
+        /// Inicializing variables
 
-
-
-
-        //
-        // Inicializing variables
-        //
-
-        // result - variable, which contains the result of calculacions
+        /** 
+        * @var double result 
+        * contains the result of calculacions
+        */
         double result = 0;
 
-        // operation - contains char, which symbolises mathematical operation, being held on the calculator 
+        /**
+        * @var int operation
+        * contains char, which symbolises mathematical operation, being held on the calculator 
+        */
         int operation = '0';
 
-        // tmp - contains the result of previous calculations
+        /**
+        * @var double tmp
+        * contains the result of previous calculations
+        */
         double tmp = 0;
 
-        // wasInput - is necessary to determine calculator's status
+        /**
+        * @var bool wasInput
+        * determines calculator's status
+        */
         bool wasInput = true;
 
 
-
-
-
-        //
-        // Form inicialization
-        //
+        /**
+        * @brief Form inicialization
+        * @public
+        */
         public Form1()
         {
             InitializeComponent();
         }
 
 
+        /**
+        * @publicsection
+        */
 
-
-
-        // 
-        // Section with events caused by pushing buttons
-        // 
-
-        // button_n_Click - methods - events handlers when pushing the buttons representing numbers
+        /**
+        * @brief Method - event handler when pushing the button representing number 1
+        * @param [in] sender    Provides a reference to the object that has raised the event
+        * @param [in] e         An object specific for the event being processed
+        * @post Shows "1" on screen
+        */
         public void button_1_Click(object sender, EventArgs e)
         {
             buttonInts(1);
         }
 
+        /**
+        * @brief Method - event handler when pushing the button representing number 2
+        * @param [in] sender    Provides a reference to the object that has raised the event
+        * @param [in] e         An object specific for the event being processed
+        * @post Shows "2" on screen
+        */
         public void button_2_Click(object sender, EventArgs e)
         {
             buttonInts(2);
         }
 
+        /**
+        * @brief Method - event handler when pushing the button representing number 3
+        * @param [in] sender    Provides a reference to the object that has raised the event
+        * @param [in] e         An object specific for the event being processed
+        * @post Shows "3" on screen
+        */
         public void button_3_Click(object sender, EventArgs e)
         {
             buttonInts(3);
         }
 
+        /**
+        * @brief Method - event handler when pushing the button representing number 4
+        * @param [in] sender    Provides a reference to the object that has raised the event
+        * @param [in] e         An object specific for the event being processed
+        * @post Shows "4" on screen
+        */
         public void button_4_Click(object sender, EventArgs e)
         {
             buttonInts(4);
         }
 
+        /**
+        * @brief Method - event handler when pushing the button representing number 5
+        * @param [in] sender    Provides a reference to the object that has raised the event
+        * @param [in] e         An object specific for the event being processed
+        * @post Shows "5" on screen
+        */
         public void button_5_Click(object sender, EventArgs e)
         {
             buttonInts(5);
         }
 
+        /**
+        * @brief Method - event handler when pushing the button representing number 6
+        * @param [in] sender    Provides a reference to the object that has raised the event
+        * @param [in] e         An object specific for the event being processed
+        * @post Shows "6" on screen
+        */
         public void button_6_Click(object sender, EventArgs e)
         {
             buttonInts(6);
         }
 
+        /**
+        * @brief Method - event handler when pushing the button representing number 7
+        * @param [in] sender    Provides a reference to the object that has raised the event
+        * @param [in] e         An object specific for the event being processed
+        * @post Shows "7" on screen
+        */
         public void button_7_Click(object sender, EventArgs e)
         {
             buttonInts(7);
         }
 
+        /**
+        * @brief Method - event handler when pushing the button representing number 8
+        * @param [in] sender    Provides a reference to the object that has raised the event
+        * @param [in] e         An object specific for the event being processed
+        * @post Shows "8" on screen
+        */
         public void button_8_Click(object sender, EventArgs e)
         {
             buttonInts(8);
         }
 
+        /**
+        * @brief Method - event handler when pushing the button representing number 9
+        * @param [in] sender    Provides a reference to the object that has raised the event
+        * @param [in] e         An object specific for the event being processed
+        * @post Shows "9" on screen
+        */
         public void button_9_Click(object sender, EventArgs e)
         {
             buttonInts(9);
         }
 
+        /**
+        * @brief Method - event handler when pushing the button representing number 0
+        * @param [in] sender    Provides a reference to the object that has raised the event
+        * @param [in] e         An object specific for the event being processed
+        * @post Shows "0" on screen
+        */
         public void button_0_Click(object sender, EventArgs e)
         {
             buttonInts(0);
@@ -105,14 +178,27 @@ namespace ivs_project2
         //
 
 
-        // Processing event of pushing the button representing comma ','
+        /**
+        * @brief Processing event of pushing the button representing comma ','
+        * @public
+        * @param [in] sender    Provides a reference to the object that has raised the event
+        * @param [in] e         An object specific for the event being processed
+        * @post Shows "," on screen
+        */
         public void button_dot_Click(object sender, EventArgs e)
         {
             buttonInts(',');
         }
 
 
-        //  Processing event of pushing the sign change button '+/-'
+        /**
+        * @brief Processing event of pushing the sign change button '+/-'
+        * @public
+        * @param [in] sender    Provides a reference to the object that has raised the event
+        * @param [in] e         An object specific for the event being processed
+        * @post Shows minus sign in front of the number
+        * @post Negates number's value
+        */
         public void button_sign_Click(object sender, EventArgs e)
         {
             buttonInts('-');
@@ -121,7 +207,13 @@ namespace ivs_project2
 
 
 
-        //  Processing event of pushing the button representing input/output screen clearing 'C'
+        /**
+        * @brief  Processing event of pushing the button representing input/output screen clearing 'C'
+        * @public
+        * @param [in] sender    Provides a reference to the object that has raised the event
+        * @param [in] e         An object specific for the event being processed
+        * @post Clears screen, removes all the information entered before
+        */
         public void button_delete_Click(object sender, EventArgs e)
         {
             buttonInts(-1);
@@ -132,13 +224,25 @@ namespace ivs_project2
         }
 
 
-        //  Processing event of pushing the button representing backspace '<'
+        /**
+        * @brief  Processing event of pushing the button representing backspace '<'
+        * @public
+        * @param [in] sender    Provides a reference to the object that has raised the event
+        * @param [in] e         An object specific for the event being processed
+        * @post Removes last sign from screen
+        */
         public void button_remove_Click(object sender, EventArgs e)
         {
             buttonInts(-2);
         }
 
-        // Processing input from keyboard
+        /**
+        * @brief Processing input from keyboard
+        * @public
+        * @param [in] sender    Provides a reference to the object that has raised the event
+        * @param [in] e         An object specific for the event being processed
+        * @post The sign entered from keyboard is processed and shown on screen
+        */
         public void Form1_KeyDown(object sender, KeyEventArgs e)
         {
             if ('0' <= e.KeyValue && e.KeyValue <= '9')
@@ -160,44 +264,94 @@ namespace ivs_project2
         }
 
 
-        // Processing event of pushing the buttons representing mathematical operations 
+        /**
+        * @brief Processing event of pushing the buttons representing mathematical operations
+        * @publicsection
+        */
+
+        /**
+        * @brief Processing operation plus
+        * @param [in] sender    Provides a reference to the object that has raised the event
+        * @param [in] e         An object specific for the event being processed
+        * @post Waiting for the next argument
+        */
         public void button_plus_Click(object sender, EventArgs e)
         {
             operationButtonController('+');
         }
 
+        /**
+        * @brief Processing operation minus
+        * @param [in] sender    Provides a reference to the object that has raised the event
+        * @param [in] e         An object specific for the event being processed
+        * @post Waiting for the next argument
+        */
         public void button_minus_Click(object sender, EventArgs e)
         {
             operationButtonController('-');
         }
 
+        /**
+        * @brief Processing operation multiply
+        * @param [in] sender    Provides a reference to the object that has raised the event
+        * @param [in] e         An object specific for the event being processed
+        * @post Waiting for the next argument
+        */
         public void button_multiply_Click(object sender, EventArgs e)
         {
             operationButtonController('*');
         }
 
+        /**
+        * @brief Processing operation divide
+        * @param [in] sender    Provides a reference to the object that has raised the event
+        * @param [in] e         An object specific for the event being processed
+        * @post Waiting for the next argument
+        */
         public void button_divide_Click(object sender, EventArgs e)
         {
             operationButtonController('/');
 
         }
 
+        /**
+        * @brief Processing operation exponentiation
+        * @param [in] sender    Provides a reference to the object that has raised the event
+        * @param [in] e         An object specific for the event being processed
+        * @post Waiting for the next argument
+        */
         public void button_degree_Click(object sender, EventArgs e)
         {
             operationButtonController('^');
         }
+
+        /**
+        * @brief Processing operation square root
+        * @param [in] sender    Provides a reference to the object that has raised the event
+        * @param [in] e         An object specific for the event being processed
+        * @post Waiting for the equality button
+        */
         public void button_radical_Click(object sender, EventArgs e)
         {
             operationButtonController('√');
         }
 
+        /**
+        * @brief Processing operation calculating percent
+        * @param [in] sender    Provides a reference to the object that has raised the event
+        * @param [in] e         An object specific for the event being processed
+        * @post Waiting for the next argument
+        */
         public void button_percent_Click(object sender, EventArgs e)
         {
             operationButtonController('%');
         }
 
-        // Processing event of pushing the button representing factorial
-        // This method represents a different pattern, because factorial is unary operator 
+        /** Processing event of pushing the button representing factorial
+        * This method represents a different pattern, because factorial is unary operator 
+        * @param [in] sender    Provides a reference to the object that has raised the event
+        * @param [in] e         An object specific for the event being processed
+        */
         public void button_factorial_Click(object sender, EventArgs e)
         {
             if (!label_result.Text.Equals("..."))
@@ -209,7 +363,13 @@ namespace ivs_project2
         }
 
 
-        // Processing event of pushing the button representing equal sign '='
+        /**
+        * @brief Processing event of pushing the button representing equal sign '='
+        * @param [in] sender    Provides a reference to the object that has raised the event
+        * @param [in] e         An object specific for the event being processed 
+        * @pre Numbers and the operation are known
+        * @post Result is on screen       
+        */
         public void button_equal_Click(object sender, EventArgs e)
         {
             if (operation == '+')
@@ -386,17 +546,23 @@ namespace ivs_project2
 
 
 
-        //
-        // Functions sections
-        //
+        /**
+        * @brief Functions sections
+        * Is activated by pushing the buttons representing mathematical operations
+        * Accepts '+', '-', '*', '/', '%', '^', '√'
+        * @publicsection
+        */
 
-        // Is activated by pushing the buttons representing mathematical operations
-        // Accepts '+', '-', '*', '/', '%', '^', '√'
+        /**
+        * @brief Controls current state of the calculator
+        * @param [in] op    Current operation
+        */
         public void operationButtonController(int op)
         {
-            // Option 1:
-            // Calculator is in it's initial state
-            // User has entered just the first number and has pushed one of the buttons representing mathematical operations
+            /** Option 1:
+            * Calculator is in it's initial state
+            * User has entered just the first number and has pushed one of the buttons representing mathematical operations
+            */
             if (operation == '0')
             {
                 if (!label_result.Text.Equals("...") && !label_result.Text.Equals("Error"))
@@ -407,8 +573,9 @@ namespace ivs_project2
                     operation = op;
                 }
             }
-            // Option 2:
-            // An operation has already been held and user has entered a new number for calculations
+            /** Option 2:
+            * An operation has already been held and user has entered a new number for calculations
+            */
             else if ((operation != '0') && wasInput)
             {
                 operationController(operation);
@@ -418,8 +585,9 @@ namespace ivs_project2
                 wasInput = false;
                 label_result.Text = result.ToString();
             }
-            // Option 3;
-            // An operation has already been held and user has not entered a new number for calculations
+            /** Option 3:
+            * An operation has already been held and user has not entered a new number for calculations
+            */
             else if ((operation != '0') && !wasInput)
             {
                 tmp = result;
@@ -429,8 +597,12 @@ namespace ivs_project2
         }
 
 
-        // Performs necessary mathematical operation according to the variable "op"
-        // Accepts '+', '-', '*', '/', '%', '^', '√'
+        /**
+        * @brief Performs necessary mathematical operation according to the variable "op"
+        * Accepts '+', '-', '*', '/', '%', '^', '√'
+        * @param [in] op    Current operation
+        * @post The result is calculated
+        */
         public void operationController(int op)
         {
             if (op == '-')
@@ -478,12 +650,14 @@ namespace ivs_project2
         }
 
 
-        // Function outputting to the panel the results of calculations and processing requests for output
+        /**
+        * @brief Function outputting to the panel the results of calculations and processing requests for output
+        * @param [in] value Represents some states of the calculator
+        * @post Shows output when states except entered numbers
+        */
         public void buttonInts(int value)
         {
-            
-
-            // Processing sign change
+            /// Processing sign change
             if (value == '-')
             {
                 if (!label_result.Text.Equals("..."))
@@ -498,14 +672,14 @@ namespace ivs_project2
             }
 
 
-            // In case of pushing a mathematical operation button, and if after this event user has not entered data, clears information on panel and begins input on a empty line
+            /// In case of pushing a mathematical operation button, and if after this event user has not entered data, clears information on panel and begins input on a empty line
             if (!wasInput)
             {
                 label_result.Text = "...";
                 wasInput = true;
             }
 
-            // Processing Remove
+            /// Processing Remove
             if (value == -2)
             {
                 if (label_result.Text.Equals("..."))
@@ -533,7 +707,7 @@ namespace ivs_project2
                 return;
             }
 
-            // Processing  Delete
+            /// Processing  Delete
             else if (value == -1)
             {
                 label_result.Text = "...";
@@ -542,10 +716,10 @@ namespace ivs_project2
 
 
 
-            // Processing numbers or ','
+            /// Processing numbers or ','
             if (label_result.Text.Length <= 9)
             {
-                // Float point setting
+                /// Floating point numbers setting
                 if (value == ',')
                 {
                     if (!label_result.Text.Equals("...") && !label_result.Text.Equals("Error"))
@@ -554,7 +728,7 @@ namespace ivs_project2
                         wasInput = false;
                 }
 
-                // Processing numbers
+                /// Processing numbers
                 else
                 {
                     if (label_result.Text.Equals("...") || label_result.Text.Equals("Error"))
@@ -567,7 +741,11 @@ namespace ivs_project2
         }
 
 
-        // Factorial function
+        /** 
+        * @brief Factorial function
+        * @param [in] N     Number to calculate the factorial of
+        * @pre A positive number was entered and "!" button was pushed or entered from keyboard
+        */
         static double factorial(double N)
         {
             if (N < 0) // in case of entering a negative number
