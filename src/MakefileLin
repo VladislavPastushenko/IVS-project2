@@ -22,7 +22,11 @@ clean:		## Clean unnecessary files
 	./del
 	
 pack: $(ZIP_FILE)	## Pack all project files	
-
-$(ZIP_FILE) : $(ALL_FILES)
+	
+$(ZIP_FILE) : 
 	make -f MakefileLin clean
-	zip -r $@ $^
+	cp -RT ../../doc doc
+	cp -RT ../../install install
+	mkdir repo
+	rsync -ar ../* repo
+	zip -r $@ doc install repo
