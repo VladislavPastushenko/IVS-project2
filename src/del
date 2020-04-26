@@ -1,0 +1,7 @@
+#!/bin/bash
+rm -vrf `find .. -depth -type f -or -type d | grep -vE '\.\.\/([mM]ockup|plan|profiling|src|debugging\.(png|jpg|pdf|txt)|dokumentace\.pdf|screenshot\.(png|PNG)|skutecnost\.txt|hodnoceni\.txt|README\.md|\.git(|\/*)|\.editorconfig|LICENSE)'`
+rm -vrf `find ../plan -depth -type f -or -type d | grep -vE "^\.\.\/plan$" | grep -vE '^\.\.\/plan\/xpastu04_xcaras00_xsenic00_xtomas34\.txt'`
+rm -vrf `find ../profiling -depth -type f -or -type d | grep -vE "^\.\.\/profiling" | grep -vE '^\.\.\/profiling\/(report\.pdf|stdin[1-3]\.txt)'`
+rm -vrf `find ../src -depth -type f -or -type d | grep -vE "^\.\.\/src$" | grep -vE '^\.\.\/src\/(Tests\/*|Profiling\/*|ivs_project2\/*|Doxyfile|MakefileLin|MakefileWin|clean\.bat|dataIn\.txt|del)'`
+rm -vrf `find ../../doc -depth -type f -or -type d | grep -vE "^\.\.\/\.\.\/doc$" | grep -vE '^\.\.\/\.\.\/doc\/(html\/*)'`
+rm -vrf `find ../../install -depth -type f -or -type d | grep -vE "^\.\.\/\.\.\/install$" | grep -vE '^\.\.\/\.\.\/install\/(xpastu04_xcaras00_xsenic00_xtomas34.msi|setup.exe)'`
