@@ -1,13 +1,19 @@
-all:
+all:	## Run program
 	ivs_project2\bin\Release\ivs_project2.exe
 
 run:
 	ivs_project2\bin\Release\ivs_project2.exe
     
-profile:
+profile:	## Run program for calculation of standard deviation with sample test input
 	Profiling\bin\Release\Profiling.exe < Profiling\bin\Release\data.txt
-help:
 
-clean:
+help:		## Display help message describing how to use this program
+	help.bat
+    
+clean:		## Clean unnecessary files
+	clean.bat
 
-pack:
+pack:	## Pack all project files
+	clean.bat
+	pack.bat
+	
