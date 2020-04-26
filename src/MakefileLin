@@ -1,16 +1,32 @@
-all:
+SHELL := /bin/bash
+LOGINS = xpastu04_xcaras00_xsenic00_xtomas34
+ZIP_FILE = $(LOGINS).zip
+ALL_FILES = ../../IVS-project2
+
+all:	## Run program
 	./ivs_project2/bin/Release/ivs_project2.exe
 
-run:
+run:	## Run program
 	./ivs_project2/bin/Release/ivs_project2.exe
     
-profile:
+profile:	## Run program for calculation of standard deviation with sample test input
 	touch data.txt
 	echo "1 2 3 4 5" > data.txt 
 	./Profiling/bin/Release/Profiling.exe < data.txt
 	rm data.txt
-help:
 
-clean:
+help:		## Display help message describing how to use this program
+	@echo -e "$$(grep -hE '^\S+:.*##' $(MAKEFILE_LIST) | sed -e 's/:.*##\s*/:/' -e 's/^\(.\+\):\(.*\)/\\x1b[36m\1\\x1b[m:\2/' | column -c2 -t -s :)"
 
-pack:
+clean:		## Clean unnecessary files
+	./del
+	
+pack: $(ZIP_FILE)	## Pack all project files	
+	
+$(ZIP_FILE) : 
+	make -f MakefileLin clean
+	cp -RT ../../doc doc
+	cp -RT ../../install install
+	mkdir repo
+	rsync -ar ../* repo
+	zip -r $@ doc install repo
