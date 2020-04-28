@@ -28,13 +28,13 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_D31F7CCC35F8D7E5B238BDC2C0333289"
+        "OwnerKey" = "8:_0EB736A25B25480EA2B5AB56B8D99583"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_0EB736A25B25480EA2B5AB56B8D99583"
+        "OwnerKey" = "8:_D31F7CCC35F8D7E5B238BDC2C0333289"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -55,6 +55,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
         "Release"
         {
@@ -71,6 +79,22 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
+            }
         }
     }
     "Deployable"
@@ -199,7 +223,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:xpastu04_xcaras00_xsenic00_xtomas34"
         "ProductCode" = "8:{1BAF2BBA-06F1-4826-A472-066F02B82645}"
-        "PackageCode" = "8:{14197E46-9950-4969-BCC3-E219F98DD9BF}"
+        "PackageCode" = "8:{690545F6-FAB2-43A9-BE28-228230B1A6BD}"
         "UpgradeCode" = "8:{278B94A6-4FA0-4CA6-BFD0-5649E4EFCAF1}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
@@ -212,7 +236,7 @@
         "ARPHELPLINK" = "8:"
         "Title" = "8:xpastu04_xcaras00_xsenic00_xtomas34"
         "Subject" = "8:"
-        "ARPCONTACT" = "8:Default Company Name"
+        "ARPCONTACT" = "8:xpastu04_xcaras00_xsenic00_xtomas34"
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:"
         "ARPURLINFOABOUT" = "8:"
@@ -734,7 +758,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_0EB736A25B25480EA2B5AB56B8D99583"
             {
-            "SourcePath" = "8:..\\ivs_project2\\obj\\Release\\ivs_project2.exe"
+            "SourcePath" = "8:..\\ivs_project2\\obj\\Debug\\ivs_project2.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_44685A686E87434ABF62866FFDC4F030"

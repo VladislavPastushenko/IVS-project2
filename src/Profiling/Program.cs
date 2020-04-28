@@ -4,6 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
+/**
+ *  @file Program.cs
+ *  The file contains profiling program for math library.
+ *  @authors Pastushenko Vladislav
+ *  @date April 2020
+ */
+
+
 namespace Profiling
 {
     class Program
@@ -18,7 +27,7 @@ namespace Profiling
             // Put information from stdin to variable data
             int symb = Console.Read();
             string data = "";
-            for ( int i = 0; symb > -1; symb = Console.Read())
+            for ( ; symb > -1; symb = Console.Read())
             {
                 data += (char)symb;
 

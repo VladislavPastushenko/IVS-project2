@@ -214,6 +214,9 @@ namespace ivs_project2
         * @param [in] e         An object specific for the event being processed
         * @post Clears screen, removes all the information entered before
         */
+
+
+        // Debugging by xpastu04
         public void button_delete_Click(object sender, EventArgs e)
         {
             buttonInts(-1);

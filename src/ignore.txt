@@ -8,6 +8,7 @@ mockup
 plan
 profiling
 src
+debugging.PNG
 LICENSE
 README.md
 screenshot.PNG
@@ -20,6 +21,7 @@ ivs_project2
 Profiling
 Test
 xpastu04_xcaras00_xsenic00_xtomas34
+icon.ico
 clean.bat
 pack.bat
 help.bat
