@@ -2,4 +2,4 @@ Sometimes we did not manage to keep to project's deadlines.
 We had to make changes to those project parts, that should have already been fully completed.
 Task distribution was not always according to the original plan.
 Time spent on profiling was underrated, while planning.
-We have not took into consideration 
+We have not toaken into consideration 
