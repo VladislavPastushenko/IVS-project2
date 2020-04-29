@@ -1,0 +1,4 @@
+xpastu04 140% (GUI, math lib, tests, profiling, makefileWin, makefileLin, installer)
+xsenic00 80% (tests, mockup, math lib)
+xcaras00 90% (GUI, makefileLin, user manual, documentation)
+xtomas34 90% (tests, makefileLin, mockup
