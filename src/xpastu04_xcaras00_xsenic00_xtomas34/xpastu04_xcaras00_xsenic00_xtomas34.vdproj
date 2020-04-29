@@ -21,6 +21,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_3DE7A9BCFF2B41ADBFF871A88441EA8A"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_D31F7CCC35F8D7E5B238BDC2C0333289"
         "OwnerKey" = "8:_0EB736A25B25480EA2B5AB56B8D99583"
         "MsmSig" = "8:_UNDEFINED"
@@ -62,6 +68,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
             }
         }
         "Release"
@@ -124,6 +138,26 @@
         }
         "File"
         {
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_3DE7A9BCFF2B41ADBFF871A88441EA8A"
+            {
+            "SourcePath" = "8:..\\icon.ico"
+            "TargetName" = "8:icon.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_A3124044C81C45DDBFB60F223B733679"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_D31F7CCC35F8D7E5B238BDC2C0333289"
             {
             "AssemblyRegister" = "3:1"
@@ -345,7 +379,7 @@
         {
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_0288CEC116EC4F04ADFE9D940024584A"
             {
-            "Name" = "8:Calculator"
+            "Name" = "8:Lol_kek_cheburek Calculator"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
@@ -354,7 +388,7 @@
             "Target" = "8:_0EB736A25B25480EA2B5AB56B8D99583"
             "Folder" = "8:_8150BCD24F764DF6BDD6FD366F2482C3"
             "WorkingFolder" = "8:_44685A686E87434ABF62866FFDC4F030"
-            "Icon" = "8:"
+            "Icon" = "8:_3DE7A9BCFF2B41ADBFF871A88441EA8A"
             "Feature" = "8:"
             }
         }

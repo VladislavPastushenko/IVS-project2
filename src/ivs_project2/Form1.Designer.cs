@@ -340,8 +340,8 @@
             // 
             this.panel_result.Controls.Add(this.button_sign);
             this.panel_result.Controls.Add(this.button_delete);
-            this.panel_result.Controls.Add(this.button_remove);
             this.panel_result.Controls.Add(this.label_result);
+            this.panel_result.Controls.Add(this.button_remove);
             this.panel_result.Location = new System.Drawing.Point(69, 35);
             this.panel_result.Name = "panel_result";
             this.panel_result.Size = new System.Drawing.Size(765, 99);
@@ -353,6 +353,7 @@
             this.button_sign.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button_sign.Location = new System.Drawing.Point(602, 0);
             this.button_sign.Name = "button_sign";
+            this.button_sign.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.button_sign.Size = new System.Drawing.Size(49, 99);
             this.button_sign.TabIndex = 3;
             this.button_sign.Text = "+/-";
@@ -378,6 +379,7 @@
             this.button_remove.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button_remove.Location = new System.Drawing.Point(658, 0);
             this.button_remove.Name = "button_remove";
+            this.button_remove.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.button_remove.Size = new System.Drawing.Size(49, 99);
             this.button_remove.TabIndex = 1;
             this.button_remove.Text = "<";
