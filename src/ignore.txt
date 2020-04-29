@@ -1,5 +1,6 @@
 .git
 doc
+html
 Calculator___User_Manual.pdf 
 install
 repo
@@ -13,6 +14,7 @@ debugging.PNG
 LICENSE
 README.md
 screenshot.PNG
+dokumentace.pdf
 skutecnost.txt
 hodnoceni.txt
 xpastu04_xcaras00_xsenic00_xtomas34.txt
