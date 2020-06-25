@@ -9,7 +9,7 @@ Windows 64 bit
 --------
 - xpastu04 Vladislav Pastushenko
 - xsenic00 Yahor Senichak
-- xcaras00 Elena Сarasek
+- xcaras00 Elena Сarasec
 - xtomas34 Viktoryia Tomason
 
 # License

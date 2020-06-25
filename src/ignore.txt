@@ -8,7 +8,7 @@ setup.exe
 xpastu04_xcaras00_xsenic00_xtomas34.msi
 mockup
 mockup1.png
-mockup2.png
+mockup2.jpg
 plan
 profiling
 src
