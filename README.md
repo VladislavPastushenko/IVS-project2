@@ -1,5 +1,6 @@
 # IVS-project2
-Brno University of Technology second study project in Practical Aspects of Software Design (IVS) subject. 
+Brno University of Technology second study project in Practical Aspects of Software Design (IVS) subject.
+The main task of the project was to create a desktop calculator application with GUI.
 
 # Platforms
 -----------
